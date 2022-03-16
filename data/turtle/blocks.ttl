@@ -1,0 +1,65 @@
+@prefix ex: <https://example.org/udem/ift6056/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/udem/ift6056/block/0000000000000000000060394b3a68de6834b6be90e47b61f34d0b895ff04d48>
+  a schema:Block;
+  rdfs:label "721605";
+  ex:height "721605"^^xsd:numeric;
+  ex:prev_block <https://example.org/udem/ift6056/block/000000000000000000081781f62e95c5710f7ece0b835868fedf9d40fc5f67f4> .
+
+<https://example.org/udem/ift6056/block/000000000000000000008efd57e7a88c13ef8137c5312487ca2321de77615a6c>
+  a schema:Block;
+  rdfs:label "721607";
+  ex:height "721607"^^xsd:numeric;
+  ex:prev_block <https://example.org/udem/ift6056/block/00000000000000000001839e8c2794afebd32b04f2fa176eb626d648ac2eb184> .
+
+<https://example.org/udem/ift6056/block/00000000000000000001839e8c2794afebd32b04f2fa176eb626d648ac2eb184>
+  a schema:Block;
+  rdfs:label "721606";
+  ex:height "721606"^^xsd:numeric;
+  ex:prev_block <https://example.org/udem/ift6056/block/0000000000000000000060394b3a68de6834b6be90e47b61f34d0b895ff04d48> .
+
+<https://example.org/udem/ift6056/block/00000000000000000002307e26db9e202b922f467ecad964d68a06dc451a3d27>
+  a schema:Block;
+  rdfs:label "721612";
+  ex:height "721612"^^xsd:numeric;
+  ex:prev_block <https://example.org/udem/ift6056/block/00000000000000000007c1a7d734f6c94e2f1216274217468d2c680428ac01c9> .
+
+<https://example.org/udem/ift6056/block/0000000000000000000459633d363e78b9314e9dd85c551560ce19bc917c577c>
+  a schema:Block;
+  rdfs:label "721609";
+  ex:height "721609"^^xsd:numeric;
+  ex:prev_block <https://example.org/udem/ift6056/block/00000000000000000004f14f7725e0985de632e35a9d053b022cf20a1393956b> .
+
+<https://example.org/udem/ift6056/block/00000000000000000004851b1f126fe17b65e4e1214dd847a71cbf051d739f7d>
+  a schema:Block;
+  rdfs:label "721613";
+  ex:height "721613"^^xsd:numeric;
+  ex:prev_block <https://example.org/udem/ift6056/block/00000000000000000002307e26db9e202b922f467ecad964d68a06dc451a3d27> .
+
+<https://example.org/udem/ift6056/block/00000000000000000004f14f7725e0985de632e35a9d053b022cf20a1393956b>
+  a schema:Block;
+  rdfs:label "721608";
+  ex:height "721608"^^xsd:numeric;
+  ex:prev_block <https://example.org/udem/ift6056/block/000000000000000000008efd57e7a88c13ef8137c5312487ca2321de77615a6c> .
+
+<https://example.org/udem/ift6056/block/00000000000000000007c1a7d734f6c94e2f1216274217468d2c680428ac01c9>
+  a schema:Block;
+  rdfs:label "721611";
+  ex:height "721611"^^xsd:numeric;
+  ex:prev_block <https://example.org/udem/ift6056/block/00000000000000000009e74af55dc68540188f9605715605bc2b6fde636f63b7> .
+
+<https://example.org/udem/ift6056/block/00000000000000000009e74af55dc68540188f9605715605bc2b6fde636f63b7>
+  a schema:Block;
+  rdfs:label "721610";
+  ex:height "721610"^^xsd:numeric;
+  ex:prev_block <https://example.org/udem/ift6056/block/0000000000000000000459633d363e78b9314e9dd85c551560ce19bc917c577c> .
+
+<https://example.org/udem/ift6056/block/0000000000000000000a288509e401dbf2c5880d620ff3c987155d1e617b883c>
+  a schema:Block;
+  rdfs:label "721614";
+  ex:height "721614"^^xsd:numeric;
+  ex:prev_block <https://example.org/udem/ift6056/block/00000000000000000004851b1f126fe17b65e4e1214dd847a71cbf051d739f7d> .

@@ -1,6 +1,5 @@
 import json
 from urllib.request import urlopen
-
 import numpy as np
 import pandas as pd
 
@@ -18,6 +17,12 @@ def getBlock(block_hash) :
 	data_json = json.loads(response.read())
 	return data_json
 
+def getPreviousBlock(block) :
+	return getBlock(block['prev_block'])
+
+def getNextBlock(block) :
+	return getBlock(block['next_block'][0])
+
 def getTransaction(tx_hash) :
 	tx_url = 'https://blockchain.info/rawtx/' + tx_hash
 
@@ -32,7 +37,8 @@ def totalValueOfTransaction(transaction) :
 	return total
 
 def isCoinbase(transaction) :
-	return len(transaction['inputs']) == 1 and transaction['inputs'][0]['prev_out']['value'] == 0
+	# return len(transaction['inputs']) == 1 and transaction['inputs'][0]['prev_out']['value'] == 0
+	return transaction['inputs'][0]['script'] == ''
 
 def satoshiToBTC(satoshi) :
 	return satoshi/100000000

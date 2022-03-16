@@ -1,0 +1,24 @@
+prefixes:
+  # default
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  owl: http://www.w3.org/2002/07/owl#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  # functions
+  grel: "http://users.ugent.be/~bjdmeest/function/grel.ttl#"
+  # vocabulary for our entities and predicates
+  schema: "https://schema.org/"
+
+  # our own namespace
+  ex: "https://example.org/udem/ift6056/"
+
+
+mappings:
+  recipe:
+    sources:
+      - ['json/coinbase_utxos.json~jsonpath', "$[*]"]
+    s: ex:utxo/coinbase_$(block_hash)
+    po:
+      - [a, schema:UTXO]
+      - [rdfs:label, Coinbase]
+      - [ex:input, ex:transaction/$(input_of_tx_index)~iri]
