@@ -23,3 +23,15 @@ java -jar _rmlmapper.jar -m utxos.rml.ttl -o turtle/utxos.ttl -s turtle
 yarrrml-parser -i coinbase_utxos.yarrrml.yml -o coinbase_utxos.rml.ttl
 java -jar _rmlmapper.jar -m coinbase_utxos.rml.ttl -o turtle/coinbase_utxos.ttl -s turtle
 ```
+
+## Financial data
+Setup
+```
+pip3 install yfinance
+mkdir financial
+```
+Using it:
+```
+from get_financial_data import get_ticker_data
+get_ticker_data('btc-usd')
+```
