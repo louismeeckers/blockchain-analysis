@@ -21,4 +21,5 @@ mappings:
     po:
       - [a, schema:UTXO]
       - [rdfs:label, Coinbase]
+      - [ex:value, $(value)]
       - [ex:input, ex:transaction/$(input_of_tx_index)~iri]

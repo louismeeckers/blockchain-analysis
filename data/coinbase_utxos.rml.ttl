@@ -50,8 +50,17 @@
 :map_recipe_000 rr:predicateObjectMap :pom_002.
 :pm_002 a rr:PredicateMap.
 :pom_002 rr:predicateMap :pm_002.
-:pm_002 rr:constant ex:input.
+:pm_002 rr:constant ex:value.
 :pom_002 rr:objectMap :om_002.
 :om_002 a rr:ObjectMap;
+    rml:reference "value";
+    rr:termType rr:Literal.
+:pom_003 a rr:PredicateObjectMap.
+:map_recipe_000 rr:predicateObjectMap :pom_003.
+:pm_003 a rr:PredicateMap.
+:pom_003 rr:predicateMap :pm_003.
+:pm_003 rr:constant ex:input.
+:pom_003 rr:objectMap :om_003.
+:om_003 a rr:ObjectMap;
     rr:template "https://example.org/udem/ift6056/transaction/{input_of_tx_index}";
     rr:termType rr:IRI.

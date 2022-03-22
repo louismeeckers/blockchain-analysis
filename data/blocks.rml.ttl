@@ -14,12 +14,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>.
 @prefix schema: <https://schema.org/>.
-@prefix dbo: <http://dbpedia.org/ontology/>.
-@prefix fo: <https://www.bbc.co.uk/ontologies/fo/>.
-@prefix rev: <http://purl.org/stuff/rev#>.
-@prefix wd: <https://www.wikidata.org/wiki/>.
-@prefix food: <http://data.lirmm.fr/ontologies/food#>.
-@prefix essglobal: <http://purl.org/essglobal/vocab/>.
 @prefix ex: <https://example.org/udem/ift6056/>.
 
 :rules_000 a void:Dataset;

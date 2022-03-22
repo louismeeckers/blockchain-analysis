@@ -22,4 +22,6 @@ mappings:
       - [a, schema:UTXO]
       - [rdfs:label, $(n)]
       - [ex:tx_index, $(tx_index)]
+      - [ex:value, $(value), xsd:numeric]
+      - [ex:address, ex:address/$(address)~iri]
       - [ex:input, ex:transaction/$(input_of_tx_index)~iri]
