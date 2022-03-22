@@ -6,7 +6,7 @@ import yfinance as yf
 # btc-usd and ltc-usd have longest history
 tested_tickers = ['btc-usd', 'ltc-usd', 'eth-usd', 'bch-usd', 'eth-btc', 'ltc-btc', 'bch-btc', 'doge-btc', 'shib-btc', 'uni3-btc']
 
-def fetch_data(start_date, end_date, ticker) -> pd.DataFrame:
+def fetch_data(ticker, start_date, end_date) -> pd.DataFrame:
         data_df = yf.download(ticker, start=start_date, end=end_date, proxy=None)
         data_df = data_df.reset_index()
 
@@ -23,7 +23,7 @@ def fetch_data(start_date, end_date, ticker) -> pd.DataFrame:
 
         return data_df
 
-def get_ticker_data(ticker, force_reload=False):
+def get_ticker_data(ticker, start_date, end_date, force_reload=False):
     if isfile('./financial/'+ticker+'.csv') and not force_reload:
         data = pd.read_csv('financial/'+ticker+'.csv')
     else:
