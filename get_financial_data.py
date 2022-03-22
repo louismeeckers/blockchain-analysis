@@ -1,6 +1,8 @@
 from os.path import isfile
 import pandas as pd
 import yfinance as yf
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 # list of tested tickers
 # btc-usd and ltc-usd have longest history
@@ -34,6 +36,35 @@ def get_ticker_data(ticker, start_date, end_date, force_reload=False):
     data['date'] = pd.to_datetime(data['date'])
     print("Shape of DataFrame: ", data.shape)
     return data
+
+def get_data_recurrently(start_date='2016-01-01', n=10, years=0, months=0, weeks=0, days=0):
+    """Get price of btc-usd reccurently based on an interval size (in years, months, weeks, days)
+
+    Parameters
+    ----------
+    start_date: first date we get data from
+    n: number of dates we are going to take data from (number of intervals)
+    years: number of years between each interval
+    months: number of months between each interval
+    weeks: number of weeks between each interval
+    days: number of days between each interval
+
+    Returns
+    -------
+    output: pandas dataframe where rows corresponds to intervals
+    """
+
+    date = datetime.strptime(start_date, '%Y-%m-%d')
+    print(date.strftime('%Y-%m-%d'))
+    btc_data = fetch_data(ticker='btc-usd', start_date=date.strftime('%Y-%m-%d'), end_date=date.strftime('%Y-%m-%d'))
+    
+    for i in range(n-1):
+        date = date + relativedelta(years=years, months=months, weeks=weeks, days=days)
+        print(date.strftime('%Y-%m-%d'))
+        new_btc_data = fetch_data(ticker='btc-usd', start_date=date.strftime('%Y-%m-%d'), end_date=date.strftime('%Y-%m-%d'))
+        btc_data = pd.concat([btc_data, new_btc_data])
+    
+    return btc_data.reset_index()
 
 if __name__ == '__main__':
     print(get_ticker_data('btc-usd', True).head)
