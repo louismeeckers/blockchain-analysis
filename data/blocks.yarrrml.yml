@@ -22,4 +22,6 @@ mappings:
       - [a, schema:Block]
       - [rdfs:label, $(height)]
       - [ex:height, $(height), xsd:numeric]
+      - [ex:timestamp, $(timestamp), xsd:numeric]
+      - [ex:time_gmt, $(time_gmt), xsd:dateTime]
       - [ex:prev_block, ex:block/$(prev_block_hash)~iri]

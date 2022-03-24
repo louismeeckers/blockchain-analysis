@@ -60,8 +60,28 @@
 :map_recipe_000 rr:predicateObjectMap :pom_003.
 :pm_003 a rr:PredicateMap.
 :pom_003 rr:predicateMap :pm_003.
-:pm_003 rr:constant ex:prev_block.
+:pm_003 rr:constant ex:timestamp.
 :pom_003 rr:objectMap :om_003.
 :om_003 a rr:ObjectMap;
+    rml:reference "timestamp";
+    rr:termType rr:Literal;
+    rr:datatype xsd:numeric.
+:pom_004 a rr:PredicateObjectMap.
+:map_recipe_000 rr:predicateObjectMap :pom_004.
+:pm_004 a rr:PredicateMap.
+:pom_004 rr:predicateMap :pm_004.
+:pm_004 rr:constant ex:time_gmt.
+:pom_004 rr:objectMap :om_004.
+:om_004 a rr:ObjectMap;
+    rml:reference "time_gmt";
+    rr:termType rr:Literal;
+    rr:datatype xsd:dateTime.
+:pom_005 a rr:PredicateObjectMap.
+:map_recipe_000 rr:predicateObjectMap :pom_005.
+:pm_005 a rr:PredicateMap.
+:pom_005 rr:predicateMap :pm_005.
+:pm_005 rr:constant ex:prev_block.
+:pom_005 rr:objectMap :om_005.
+:om_005 a rr:ObjectMap;
     rr:template "https://example.org/udem/ift6056/block/{prev_block_hash}";
     rr:termType rr:IRI.
