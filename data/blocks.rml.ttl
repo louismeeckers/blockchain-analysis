@@ -55,7 +55,7 @@
 :om_002 a rr:ObjectMap;
     rml:reference "height";
     rr:termType rr:Literal;
-    rr:datatype xsd:numeric.
+    rr:datatype xsd:integer.
 :pom_003 a rr:PredicateObjectMap.
 :map_recipe_000 rr:predicateObjectMap :pom_003.
 :pm_003 a rr:PredicateMap.
@@ -65,7 +65,7 @@
 :om_003 a rr:ObjectMap;
     rml:reference "timestamp";
     rr:termType rr:Literal;
-    rr:datatype xsd:numeric.
+    rr:datatype xsd:integer.
 :pom_004 a rr:PredicateObjectMap.
 :map_recipe_000 rr:predicateObjectMap :pom_004.
 :pm_004 a rr:PredicateMap.
