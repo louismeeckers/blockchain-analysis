@@ -25,7 +25,7 @@ def fetch_data(ticker, start_date, end_date) -> pd.DataFrame:
 
         return data_df
 
-def get_ticker_data(ticker, start_date, end_date, force_reload=False):
+def get_ticker_data(ticker, start_date='2009-01-01', end_date='2022-03-01', force_reload=False):
     if isfile('./financial/'+ticker+'.csv') and not force_reload:
         data = pd.read_csv('financial/'+ticker+'.csv')
     else:
