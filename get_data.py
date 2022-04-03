@@ -1,5 +1,6 @@
 import json
 from urllib.request import urlopen
+from urllib.error import HTTPError
 import numpy as np
 import pandas as pd
 
@@ -17,9 +18,18 @@ def getBlock(block_hash):
 	data_json = json.loads(response.read())
 	return data_json
 
+def request(block_url):
+    try:
+        return urlopen(block_url)
+    except HTTPError as e:
+        if e.code == 429:
+            print("Got 429")
+            return request(block_url)
+        raise
+
 def getBlockN(n):
     block_url = f'https://blockchain.info/block-height/{n}?format=json'
-    response = urlopen(block_url)
+    response = request(block_url)
     data_json = json.loads(response.read())['blocks']
 
     if len(data_json) == 0:

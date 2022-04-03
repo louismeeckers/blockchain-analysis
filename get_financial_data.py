@@ -30,7 +30,7 @@ def get_ticker_data(ticker, start_date='2009-01-01', end_date='2022-03-01', forc
         data = pd.read_csv('financial/'+ticker+'.csv')
     else:
         if ticker not in tested_tickers: print("Warning! Untested ticker")
-        data = fetch_data(start_date='2009-01-01', end_date='2021-11-01', ticker=ticker)  
+        data = fetch_data(start_date=start_date, end_date=end_date, ticker=ticker)  
         data.to_csv('financial/'+ticker+'.csv', index=False)
     
     data['date'] = pd.to_datetime(data['date'])

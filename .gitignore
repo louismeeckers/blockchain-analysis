@@ -4,3 +4,6 @@ financial/
 
 data/json/
 data/turtle/
+data_btc/
+
+*.png
