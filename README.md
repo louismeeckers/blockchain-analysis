@@ -35,6 +35,8 @@ java -jar _rmlmapper.jar -m coinbase_utxos.rml.ttl -o turtle/coinbase_utxos.ttl 
 # Statistical analysis
 The core of this analysis can be found in the `statistical_analysis` notebook. This notebook gets the block data from the `data_btc` folder.
 
+The `btc_eth` notebook contains the comparisons between the Bitcoin and Ethereum values.
+
 ## Requirements
 ```
 pip3 install yfinance pandas numpy matplotlib
@@ -55,9 +57,9 @@ For the small block, at the start of the blockchain it can go as fast as 3 per s
 Input the `start` and `end` heights selected above into the second cell of the notebook and run all.
 
 ## Times of interest
-We studied the range from `480000` to `540000` for the first bitcoin hype and included this data for demonstration purposes.
+We studied the range from `480000` to `540000` for the first bitcoin hype late 2017 and included this data for demonstration purposes.
 
-We also recommend looking at the range from `630000` to `705000` for the effect of the chinese ban, this data is also included.
+We also studied and included the range from `630000` to `705000` for the effect of the chinese ban early 2020.
 
 ## Saved figures
-The figures used in the report are all saved in `figures` folder.
+The figures used in the report are all saved in the `figures` folder.
