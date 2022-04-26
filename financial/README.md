@@ -1,0 +1,1 @@
+Folder for the financial data to be stored, to avoid always downloading it.
