@@ -1,9 +1,15 @@
 .ipynb_checkpoints/
 __pycache__/
-financial/
+
+financial/*.csv
+
+data_btc/*.csv
+!data_btc/blocks_480000_540000.csv
+!data_btc/blocks_630000_705000.csv
 
 data/json/
 data/turtle/
-data_btc/
 
-*.png
+output.png
+*.pdf
+*.pptx
